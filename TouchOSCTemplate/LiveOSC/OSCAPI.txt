@@ -1,0 +1,176 @@
+CALLS
+=====
+
+/live/tempo                                                             Request current tempo, replies with /live/tempo (float tempo)
+/live/tempo             (float tempo)                                   Set the tempo, replies with /live/tempo (float tempo)
+/live/time                                                              Request current song time, replies with /live/time (float time)
+/live/time              (float time)                                    Set the time , replies with /live/time (float time)
+/live/overdub           (int on/off)                                    Enables/disables overdub
+/live/state                                                             Returns the current tempo and overdub status
+/live/undo                                                              Requests the song to undo the last action
+/live/redo                                                              Requests the song to redo the last action
+
+/live/next/cue                                                          Jumps to the next cue point
+/live/prev/cue                                                          Jumps to the previous cue point
+/live/play                                                              Starts the song playing
+/live/play/continue                                                     Continues playing the song from the current point
+/live/play/selection                                                    Plays the current selection
+/live/play/clip         (int track, int clip)                           Launches clip number clip in track number track
+/live/play/clipslot     (int track, int clip)                           Launches clip number clip in track number track even if a clip isnt present in the slot (ie stops the slot)
+/live/play/scene        (int scene)                                     Launches scene number scene
+/live/stop                                                              Stops playing the song
+/live/stop/clip         (int track, int clip)                           Stops clip number clip in track number track
+/live/stop/track        (int track)                                     Stops track number track
+
+/live/scenes            blank or ('query')                              Returns the total number of scenes in the form /live/scenes (int)
+/live/tracks            blank or ('query')                              Returns the total number of tracks in the form /live/tracks (int)
+
+/live/scene                                                             Returns the currently selected scene index
+
+/live/name/scene        blank or ('query')                              Returns a a series of all the scene names in the form /live/name/scene (int scene, string name)
+/live/name/scene        (int scene)                                     Returns a single scene's name in the form /live/name/scene (int scene, string name)
+/live/name/scene        (int scene, string name)                        Sets scene number scene's name to name
+/live/name/sceneblock   (int track, int size)                           Returns a series of scene name starting at (int scene) of length (int size)
+
+/live/name/track                                                        Returns a a series of all the track names in the form /live/name/track (int track, string name, int color)
+/live/name/track        (int track)                                     Returns a single track's name in the form /live/name/track (int track, string name, int color)
+/live/name/track        (int track, string name)                        Sets track number track's name to name
+/live/name/trackblock   (int track, int size)                           Returns a series of track name starting at (int track) of length (int size)
+
+/live/name/clip                                                         Returns a a series of all the clip names in the form /live/name/clip (int track, int clip, string name)
+/live/name/clip         (int track, int clip)                           Returns a single clip's name in the form /live/name/clip (int clip, string name)
+/live/name/clip         (int track, int clip, string name)              Sets clip number clip in track number track's name to name
+/live/name/clipblock    (int track, int clip, int sizeX, int sizeY)     Returns a series of clip names in a area starting at (int track, int clip) of size (sizeX, sizeY)
+
+/live/arm               (int track)                                     Get arm status for track number track
+/live/arm               (int track, int armed/disarmed)                 Arms/disamrs track number track
+/live/mute              (int track)                                     Get mute status for track number track
+/live/mute              (int track, int mute/unmute)                    Mutes/unmutes track number track
+/live/solo              (int track)                                     Get solo status for track number track
+/live/solo              (int track, int solo/unsolo)                    Solos/unsolos track number track
+/live/volume            (int track)                                     Returns the current volume of track number track as: /live/volume (int track, float volume(0.0 to 1.0))
+/live/volume            (int track, float volume(0.0 to 1.0))           Sets track number track's volume to volume
+/live/pan               (int track)                                     Returns the pan of track number track as: /live/pan (int track, float pan(-1.0 to 1.0))
+/live/pan               (int track, float pan(-1.0 to 1.0))             Sets track number track's pan to pan
+/live/send              (int track)                                     Returns a list of all sends and values on track number track as: /live/send (int track, int send, float level, int send, ...)
+/live/send              (int track, int send)                           Returns the send level of send (send) on track number track as: /live/send (int track, int send, float level(0.0 to 1.0))
+/live/send              (int track, int send, float level(0.0 to 1.0))  Sets the send (send) of track number (track)'s level to (level)
+/live/pitch             (int track, int clip)                           Returns the pan of track number track as: /live/pan (int track, int clip, int coarse(-48 to 48), int fine (-50 to 50))
+/live/pitch             (int track, int clip, int coarse(-48 to 48), 
+                        int fine (-50 to 50))                           Sets clip number clip in track number track's pitch to coarse / fine
+
+/live/return/mute       (int track)                                     Get mute status for return track number track
+/live/return/mute       (int track, int mute/unmute)                    Mutes/unmutes return track number track
+/live/return/solo       (int track)                                     Get solo status for return track number track
+/live/return/solo       (int track, int solo/unsolo)                    Solos/unsolos return track number track
+/live/return/volume     (int track)                                     Returns the current volume of return track number track as: /live/volume (int track, float volume(0.0 to 1.0))
+/live/return/volume     (int track, float volume(0.0 to 1.0))           Sets return track number track's volume to volume
+/live/return/pan        (int track)                                     Returns the pan of return track number track as: /live/pan (int track, float pan(-1.0 to 1.0))
+/live/return/pan        (int track, float pan(-1.0 to 1.0))             Sets return track number track's pan to pan
+/live/return/send       (int track)                                     Returns a list of all sends and values on return track number track as: /live/send (int track, int send, float level, int send, ...)
+/live/return/send       (int track, int send)                           Returns the send level of send (send) on return track number track as: /live/send (int track, int send, float level(0.0 to 1.0))
+/live/return/send       (int track, int send, float level(0.0 to 1.0))  Sets the send (send) of return track number (track)'s level to (level)
+
+/live/master/volume     (int track)                                     Returns the current volume of the master track as: /live/master/volume float volume(0.0 to 1.0)
+/live/master/volume     (int track, float volume(0.0 to 1.0))           Sets the master track's volume to volume
+/live/master/pan        (int track)                                     Returns the pan of the master track as: /live/master/pan (int track, float pan(-1.0 to 1.0))
+/live/master/pan        (int track, float pan(-1.0 to 1.0))             Sets master track's pan to pan
+
+/live/track/jump        (int track, float beats)                        Jumps in track's currently running session clip by beats
+/live/track/info        (int track)                                     Returns clip slot status' for all clips in a track in the form /live/track/info (tracknumber, armed  (clipnumber, state, length))
+                                                                        [state: 0 = no clip, 1 = has clip, 2 = playing, 3 = triggered]
+/live/track/view        (int track)                                     Selects a track to view
+/live/return/view       (int track)                                     Selects a return track to view
+/live/master/view                                                       Selects the master track
+
+/live/track/device/view (int track, int device)                         Selects device on track to view
+/live/return/device/view (int track, int device)                        Selects device on return track to view
+/live/master/device/view (int device)                                   Selects device on the master track
+
+/live/clip/view         (int track, int clip)                           Selects a clip on track to view
+
+/live/detail/view	(int)						Switches detail view [0 = clip, 1 = track]
+
+/live/clip/info         (int track, int clip)                           Gets the status of a single clip in the form  /live/clip/info (tracknumber, clipnumber, state)
+                                                                        [state: 0 = no clip, 1 = has clip, 2 = playing, 3 = triggered]
+
+/live/devicelist        (int track)                                     Returns a list of all devices and names on track number track as: /live/device (int track, int device, str name, ...)
+/live/device            (int track, int device)                         Returns a list of all parameter values and names on device on track number track
+                                                                        as: /live/deviceall/param (int track, int device, int parameter int value,  str name, ...)
+/live/device            (int track, int device, int parameter)          Returns the name and value of parameter on device on track as: /live/device/param (int track, int device, int paarmeter, int value, str name)
+/live/device            (int track, int device, int parameter,          Sets parameter on device on track number track to value
+                        int value) 
+
+/live/device/range      (int track, int device)                         Returns the min and max value of all parameters of device on track in the format /live/device/range (int track, int device, int/float min, int/float max, ...)
+/live/device/range      (int track, int device, int parameter)          Returns the min and max value of parameter of device on track in the format /live/device/range (int track, int device, int/float min, int/float max)
+
+/live/return/devicelist (int track)                                     Returns a list of all devices and names on track number track as: /live/device (int track, int device, str name, ...)
+/live/return/device     (int track, int device)                         Returns a list of all parameter values and names on device on track number track
+                                                                        as: /live/device/allparm (int track, int device, int parameter int value,  str name, ...)
+/live/return/device     (int track, int device, int parameter)          Returns the name and value of parameter on device on track as: /live/device/param (int track, int device, int parameter, int value)
+/live/return/device     (int track, int device, int parameter,          Sets parameter on device on track number track to value
+                        int value) 
+
+/live/return/device/range (int track, int device)                       Returns the min and max value of all parameters of device on return track in the format /live/return/device/range (int track, int device, int/float min, int/float max, ...)
+/live/return/device/range (int track, int device, int parameter)        Returns the min and max value of parameter of device on return track in the format /live/return/device/range (int track, int device, int/float min, int/float max)                        
+
+/live/master/devicelist                                                 Returns a list of all devices and names on the master track as: /live/device (int device, str name, ...)
+/live/master/device     (int device)                                    Returns a list of all parameter values and names on device on the master track
+                                                                        as: /live/device (int device, int parameter int value,  str name, ...)
+/live/master/device     (int device, int parameter)                     Returns the name and value of parameter on device on the master track as: /live/device (int device, int parameter, int value)
+/live/master/device     (int device, int parameter, int value)          Sets parameter on device on track number track to value
+
+/live/return/device/range (int device)                                  Returns the min and max value of all parameters of device on the master track in the format /live/master/device/range (int device, int/float min, int/float max, ...)
+/live/return/device/range (int device, int parameter)                   Returns the min and max value of parameter of device on the master track in the format /live/master/device/range (int device, int/float min, int/float max)          
+
+/live/clip/loopstart	(int track, int clip)				Get the loopstart for clip in track
+/live/clip/loopstart    (int track, int clip, float loopstart)          Set the loop start position for clip in track
+/live/clip/loopend	(int track, int clip)				Get the loopend for clip in track
+/live/clip/loopend      (int track, int clip, float loopend)            Set the loop end position for clip in track
+/live/clip/loopstate    (int track, int clip)                           Get the loop state of clip on track
+/live/clip/loopstate    (int track, int clip, int on/off)               Set the loop state of clip on track
+
+/live/clip/loopstart_id	(int track, int clip)				Get the loopstart for clip in track with the track and clip id /live/clip/loopstart_id (int track, int clip, float start)
+/live/clip/loopend_id	(int track, int clip)				Get the loopend for clip in track with the track and clip id /live/clip/loopend_id (int track, int clip, float end)
+/live/clip/loopstate_id (int track, int clip)                           Get the loop state of clip on track with the track and clip id /live/clip/loopstate_id (int track, int clip, int state)
+
+
+/live/master/crossfader                                                 Get the current crossfader position
+/live/master/crossfader (float position)                                Set the crossfader position
+
+/live/quantization (int)						Set the global quantization. 0=None, 1=8bars, 2=4bars, 3=2bars, 4=bar, 5=half, 6=half triplet, 7=quarter, 8=quarter triplet, 9=8th, 10=8thT, 11=16th, 12=16T, 13=32nd
+
+
+LISTENERS
+=========
+
+The following functions will automatically return a value when the specific controller changes in ableton
+without the need for a polling call
+
+/live/track/info
+/live/clip/info
+
+/live/name/return
+/live/name/track
+/live/name/clip
+
+/live/arm
+/live/mute
+/live/solo
+/live/volume
+/live/pan
+/live/send
+
+/live/master/volume
+/live/master/pan
+/live/crossfader
+
+/live/return/mute
+/live/return/solo
+/live/return/volume 
+/live/return/pan
+/live/return/send
+
+/live/overdub
+/live/tempo
+/live/scene
