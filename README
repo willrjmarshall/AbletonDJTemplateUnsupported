@@ -11,20 +11,3 @@ The template by default requires an Akai APC40. Additionally, it makes use of a 
 If you don't own an APC, you could readily map this template to whatever controller you have.
 
 If you have any issues getting this working, feel free to drop me a message.
-
-TouchOSC Template:
-  Packaged inside this template is a directory called TouchOSCTemplate. This contains all the files you will need
-  to add a TouchOSC control surface to your DJ setup, using your iPhone or iPod Touch.
-  
-  You will need a copy of the latest beta of Osculator. To acquire this, 
-  email Camille Troillard at camille at osculator dot net and ask for the beta with string support.
-  
-  Additionally, you will a copy of TouchOSC from the iTunes Store, and to install a copy of LiveOSC inside your
-  Ableton User Remote Scripts folder (this is inside the Live.app bundle on a Mac).
-  
-  I will write a step-by-step guide to configuring this setup for non-technical users when I get time.
-  
-  IMPORTANT NOTE: To achieve compatibility, many of the controls on the TouchOSC template use the same MIDI CC
-  and channel as the APC40: which allows the APC40 and TouchOSC to remain synced and control the same objects in
-  Ableton. If you map this template to a different hardware controller, you will need to edit the MIDI CCs inside
-  Osculator to behave as you would like.
