@@ -87,7 +87,7 @@ class EncoderDeviceComponent(ControlSurfaceComponent):
                 self._alt_device.set_on_off_button(self._buttons[1])
             self._alt_device._on_on_off_changed()
 
-            self._rebuild_callback()
+            #self._rebuild_callback()
 
 
     def on_enabled_changed(self):

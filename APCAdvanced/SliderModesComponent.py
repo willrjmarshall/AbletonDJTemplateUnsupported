@@ -70,7 +70,7 @@ class SliderModesComponent(ModeSelectorComponent):
                      None]
                     send_controls[(self._mode_index - 2)] = slider
                     strip.set_send_controls(tuple(send_controls))
-                self._rebuild_callback()
+                #self._rebuild_callback()
 
 
 # local variables:

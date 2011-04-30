@@ -110,7 +110,7 @@ class EncoderEQComponent(ControlSurfaceComponent):
                 self._strip.set_send_controls(tuple([self._param_controls[1], self._param_controls[2], self._param_controls[3]])) 
                 ##pass               
 
-        self._rebuild_callback()
+        #self._rebuild_callback()
 
 
     def on_track_list_changed(self):

@@ -115,7 +115,7 @@ class EncoderMixerModeSelectorComponent(ModeSelectorComponent):
             for index in range(8):
                 self._mixer.channel_strip(index).set_pan_control(None)
                 self._mixer.channel_strip(index).set_send_controls((None, None, None))            
-        self._rebuild_callback()
+        #self._rebuild_callback()
 
         
     def _on_timer(self): #added to allow press & hold for Pan/Vol Mode selection

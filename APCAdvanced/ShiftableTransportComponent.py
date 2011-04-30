@@ -55,7 +55,7 @@ class ShiftableTransportComponent(TransportComponent):
             self._shift_button = button
             if self._shift_button != None:
                 self._shift_button.add_value_listener(self._shift_value)
-            self._rebuild_callback()
+            #self._rebuild_callback()
             self.update()
         return None
 
@@ -70,7 +70,7 @@ class ShiftableTransportComponent(TransportComponent):
             self._pedal = pedal
             if self._pedal != None:
                 self._pedal.add_value_listener(self._pedal_value)
-            self._rebuild_callback()
+            #self._rebuild_callback()
             self.update()
         return None
 
@@ -84,7 +84,7 @@ class ShiftableTransportComponent(TransportComponent):
             self._quant_toggle_button = button
             if self._quant_toggle_button != None:
                 self._quant_toggle_button.add_value_listener(self._quant_toggle_value)
-            self._rebuild_callback()
+            #self._rebuild_callback()
             self.update()
         return None
 

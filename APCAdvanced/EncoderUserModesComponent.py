@@ -144,7 +144,7 @@ class EncoderUserModesComponent(ModeSelectorComponent):
                     control._ring_mode_button.send_value(0)
             else:
                 pass
-            self._rebuild_callback()
+            #self._rebuild_callback()
 
 
 

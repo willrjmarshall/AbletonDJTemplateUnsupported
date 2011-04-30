@@ -36,7 +36,7 @@ class PedaledSessionComponent(APCSessionComponent):
             self._slot_launch_button = button
             if (self._slot_launch_button != None):
                 self._slot_launch_button.add_value_listener(self._slot_launch_value)
-            self._rebuild_callback()
+            #self._rebuild_callback()
             self.update()
 
 

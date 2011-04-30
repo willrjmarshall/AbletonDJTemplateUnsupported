@@ -139,7 +139,7 @@ class MatrixModesComponent(ModeSelectorComponent):
                 pass #assert False
             self._session.set_allow_update(True)
             self._session_zoom.set_allow_update(True)
-            self._rebuild_callback()
+            #self._rebuild_callback()
 
 
     def _set_note_mode(self, pattern, channel, notemap, use_stop_row = False, is_note_mode = True):

@@ -110,7 +110,7 @@ class SpecialMixerComponent(MixerComponent):
                     self._next_track_button.turn_off()
                 if (self._prev_track_button != None):
                     self._prev_track_button.turn_off()
-            self._rebuild_callback()
+            #self._rebuild_callback()
         else:
             self._update_requests += 1
 

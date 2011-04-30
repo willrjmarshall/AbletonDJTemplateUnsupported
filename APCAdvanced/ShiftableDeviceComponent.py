@@ -73,7 +73,7 @@ class ShiftableDeviceComponent(DeviceComponent):
                 else:
                     self._bank_buttons[index].turn_off()
 
-        self._rebuild_callback()
+        #self._rebuild_callback()
 
 
 
