@@ -1,0 +1,31 @@
+<pkmkdoc spec="1.12"><properties><title>Will Marshall's Ableton DJ Template</title><build>/Users/willmarshall/Projects/Will Marshall's Ableton DJ Template.mpkg</build><organization>com.willmarshall.me</organization><userSees ui="easy"/><min-target os="1"/><domain system="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>This will install the APC40 DJ Template, along with the APCAdvanced remote script.
+
+Installing will close Ableton!</description><contents><choice title="APCAdvanced" id="choice5" starts_selected="true" starts_enabled="true" starts_hidden="false"><customLoc>/tmp/APCAdvanced</customLoc><pkgref id="com.willmarshall.me.willMarshallsAbletonDjTemplate.APCAdvanced.pkg"/></choice><choice title="DJ Template Project" id="choice6" description="The template itself: an Ableton Live Set (.als) file." starts_selected="true" starts_enabled="true" starts_hidden="false"><customLoc allowAltVol="true">/tmp/WillMarshallDJTemplate</customLoc><pkgref id="com.willmarshall.me.willMarshallsAbletonDjTemplate.DJTemplateProject.pkg"/></choice><choice title="Dark Theme" id="choice8" starts_selected="true" starts_enabled="true" starts_hidden="false"><customLoc>/tmp/</customLoc><pkgref id="com.willmarshall.me.willMarshallsAbletonDjTemplate.DarkTheme.pkg"/></choice></contents><resources bg-scale="none" bg-align="bottomleft"><locale lang="en-GB"><resource type="background">/Users/willmarshall/Desktop/Ableton_logo_screen.gif</resource><resource mime-type="text/rtf" kind="embedded" type="welcome"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf230
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf0 Hi,\
+\
+This tool will install the following three things:\
+\
+1: A copy of Will Marshall's Ableton DJ Template\
+2: A copy of the APCAdvanced control surface script to be used with this template\
+3: A dark Ableton theme for use in nightclubs and other dark environments\
+\
+See http://willmarshall.me/dj-template for more information.}]]></resource><resource mime-type="text/rtf" kind="embedded" type="conclusion"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf230
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf0 Thanks for installing the DJ Template!\
+\
+The template has been installed to your Documents folder.\
+\
+The APCAdvanced control surface is now available in the MIDI preferences in the most recent version of Ableton installed on your machine.\
+\
+To activate it, select "APCAdvanced" from the Control Surface drop down in your Ableton MIDI preferences. This should replace the APC40 Control Surface, and should have the same MIDI settings.\
+\
+To active the "Dark" theme, select it from the "Skin" drop down in Ableton's Look/Feel preferences.\
+\
+-W}]]></resource></locale></resources><flags/><preinstall><action id="com.apple.packagemaker.actions.getapplication"><item1-title>com.ableton.live</item1-title><item2-title>Live</item2-title></action><action id="com.apple.packagemaker.actions.quitapplication"/></preinstall><item type="file">01apcadvanced.xml</item><item type="file">02dj.xml</item><item type="file">03dark.xml</item><mod>description</mod><mod>properties.title</mod><mod>properties.userDomain</mod><mod>properties.customizeOption</mod><mod>preinstallActions.actions</mod><mod>properties.systemDomain</mod><mod>properties.anywhereDomain</mod></pkmkdoc>
