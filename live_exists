@@ -1,0 +1,10 @@
+#!/bin/bash
+
+shopt -s nullglob dotglob; files=(/Applications/Live\ 8.2*); 
+latest_live=${files[@]:(-1)}; 
+
+if ["$latest_live" == ""]; then
+  $(exit 0)
+else
+  $(exit 1)
+fi
