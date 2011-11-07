@@ -1,0 +1,9 @@
+#!/bin/bash
+
+shopt -s nullglob dotglob; files=(/Applications/Live\ 8.2*); 
+latest_live=${files[@]:(-1)}; 
+
+mv /private/tmp/APCAdvanced "$latest_live/Live.app/Contents/App-Resources/MIDI Remote Scripts/APCAdvanced"
+
+exit 0
+

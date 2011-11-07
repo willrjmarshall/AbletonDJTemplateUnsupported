@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mv /private/tmp/WillMarshallDJTemplate $HOME/Documents/Will\ Marshall\ DJ\ Template
+
+exit 0
+
